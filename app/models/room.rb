@@ -16,6 +16,6 @@
 class Room < ActiveRecord::Base
 	validates :title, :description, :beds, :guests, :price_per_night, :image_url, presence: true
 	validates :description, length: { maximum: 400 }
-	validates_numericality_of :beds, :guests, :price_per_night
+	validates_numericality_of :beds, :guests
 
 end
