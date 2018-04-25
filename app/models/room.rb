@@ -14,7 +14,7 @@
 #
 
 class Room < ActiveRecord::Base
-	validates :title, :price_per_night presence: true
+	validates :title, :price_per_night, presence: true
 	validates :description, presence: true, length: { maximum: 400 }
 	validates :beds, numericality: { only_integer: true, :greater_than_or_equal_to => 0 }, presence: true
 	validates :guests, numericality: { only_integer: true, :greater_than_or_equal_to => 0 }, presence: true
